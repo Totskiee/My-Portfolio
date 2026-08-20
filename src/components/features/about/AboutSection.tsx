@@ -3,14 +3,14 @@ import profilePic from "@/assets/profile.png";
 export default function AboutSection() {
   return (
     <section className="max-w-3xl mx-auto px-6 pt-20">
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
+      <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-12">
 
         {/* Profile card */}
         <div className="shrink-0 flex flex-col items-center">
-          <div className="relative">
+          <div className="relative group cursor-pointer">
             <div className="absolute inset-0 bg-mint/25 blur-2xl rounded-full scale-90" />
 
-           <div className="relative w-48 h-48 rounded-full border-4 border-mint bg-surface overflow-hidden">
+            <div className="relative w-48 h-48 rounded-full border-4 border-white overflow-hidden transition-transform duration-300 group-hover:scale-105">
               <img
                 src={profilePic}
                 alt="Jerniel Jao"
@@ -19,7 +19,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <p className="mt-5 font-display text-lg font-semibold text-text">Jerniel Jao</p>
+          <p className="mt-5 font-display text-lg font-semibold text-white">Jerniel Jao</p>
           <p className="text-muted text-sm">Aspiring Web Developer</p>
         </div>
 
@@ -29,8 +29,8 @@ export default function AboutSection() {
             <span className="w-8 h-px bg-mint" />
             <p className="uppercase tracking-widest text-xs text-mint font-medium">About</p>
           </div>
-          <h1 className="font-display text-3xl font-semibold text-text mb-6">About Me</h1>
-          <p className="text-muted leading-relaxed">
+          <h1 className="font-display text-3xl font-semibold text-white mb-6">About Me</h1>
+          <p className="text-white leading-relaxed">
             Hi, I'm Jerniel — a student currently learning web development. I'm building
             my skills in JavaScript, HTML, CSS, and Tailwind, with some background in
             Java, C#, and C++. I enjoy figuring out how things work by building small
