@@ -1,7 +1,52 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+@theme {
+  --color-ink: #0F1419;
+  --color-surface: #161B22;
+  --color-surface-hover: #1C232D;
+  --color-border: #2A313C;
+  --color-mint: #5EEAD4;
+  --color-amber: #F59E0B;
+  --color-text: #E6EDF3;
+  --color-muted: #8B949E;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html, body, #root {
+  background-color: var(--color-ink);
+  min-height: 100%;
+}
+
+body {
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: var(--color-mint);
+  color: var(--color-ink);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-mint);
+  outline-offset: 2px;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-toast-in {
+  animation: toast-in 0.3s ease-out;
 }
