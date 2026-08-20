@@ -17,7 +17,7 @@ export const projects: Project[] = [
   {
     slug: "portfolio-v2",
     title: "Portfolio v2",
-    description: "An updated version of my portfolio with improved design and structure, reflecting what I've learned since my first build.",
+    description: "A personal portfolio I designed and built for my sister, showcasing her background and work with a clean, modern layout.",
     link: "https://totskie-s-portfolio.vercel.app/",
     tags: ["React", "Tailwind CSS"],
   },
